@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;netcoreapp3.1</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl />
+    <Authors>Virtualise LLC Contributors</Authors>
+    <Company>Virtualise LLC</Company>
+    <RepositoryUrl>https://github.com/kaleho/open-monikers</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/kaleho/open-monikers</PackageProjectUrl>
+    <PackageTags>monikers names naming</PackageTags>
+    <PackageLicenseFile>LICENSE.TXT</PackageLicenseFile>
+    <Description>Naming things is one of the [two hardest problems](https://www.martinfowler.com/bliki/TwoHardThings.html) in computer science, this is an opinionated suggestion for helping that.</Description>
+    <RootNamespace>Open.Monikers</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.7" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\.assets\images\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+      <Visible>False</Visible>
+    </None>
+    <None Include="..\..\LICENSE.TXT">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+      <Visible>False</Visible>
+    </None>
+  </ItemGroup>
+
+
+</Project>
