@@ -64,7 +64,7 @@ namespace Open.Monikers
             return a.Equals(b);
         }
 
-        public static TNameId Reparent<TNameId>(
+        public static TRefId Reparent<TRefId>(
             RefId refId,
             RefId parentId)
         {
@@ -89,17 +89,17 @@ namespace Open.Monikers
             }
 
             var returnValue =
-                (TNameId)Activator.CreateInstance(
-                    typeof(TNameId),
+                (TRefId)Activator.CreateInstance(
+                    typeof(TRefId),
                     newNameId.Name,
                     newNameId.ParentId);
 
             return returnValue;
         }
 
-        public static bool TryParseUri<TNameId>(
+        public static bool TryParseUri<TRefId>(
             string uri,
-            out TNameId nameId)
+            out TRefId nameId)
         {
             var names =
                 uri
@@ -117,8 +117,8 @@ namespace Open.Monikers
             try
             {
                 nameId =
-                    (TNameId)Activator.CreateInstance(
-                        typeof(TNameId),
+                    (TRefId)Activator.CreateInstance(
+                        typeof(TRefId),
                         newRefId.Name,
                         newRefId.ParentId);
             }
@@ -166,7 +166,8 @@ namespace Open.Monikers
             return _uri;
         }
 
-        protected bool Equals(RefId other)
+        protected bool Equals(
+            RefId other)
         {
             if (other == default)
             {
