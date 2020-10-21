@@ -33,7 +33,7 @@ namespace Open.Monikers
         {
             var nameType = typeof(TRefId);
 
-            var (name, id) = value.SplitOn(IRefId.NameSeparator);
+            var (name, id) = value.SplitToTuple(IRefId.NameSeparator);
 
             var instance =
                 (TRefId)Activator.CreateInstance(

@@ -4,7 +4,7 @@ namespace Open.Monikers
 {
     public static class StringParsingExtensions
     {
-        public static (string, string) SplitOn(
+        public static (string, string) SplitToTuple(
             this string value,
             string separator)
         {
@@ -30,7 +30,7 @@ namespace Open.Monikers
             return (parts[0], parts[1]);
         }
 
-        public static bool TrySplitOn(
+        public static bool TrySplitToTuple(
             this string value,
             string separator,
             out (string, string) values)
@@ -39,7 +39,7 @@ namespace Open.Monikers
 
             try
             {
-                values = value.SplitOn(separator);
+                values = value.SplitToTuple(separator);
 
                 returnValue = true;
             }

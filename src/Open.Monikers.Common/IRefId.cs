@@ -5,7 +5,7 @@ namespace Open.Monikers
     /// <summary>
     ///     An interface that represents an reference identifier,
     ///     when using a Guid or number meaning gets lost because
-    ///     a Guid for AccountId could accidently be used as a
+    ///     a Guid for AccountId could accidentally be used as a
     ///     GroupId, this is similar to using AggregateIds in DDD
     ///     but less formal of a definition
     /// </summary>
